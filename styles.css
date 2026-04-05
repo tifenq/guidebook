@@ -1,0 +1,464 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #1d1d1f;
+    background: linear-gradient(135deg, #00A651 0%, #017AA6 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    color: #1d1d1f;
+    text-align: center;
+    padding: 60px 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #1d1d1f;
+}
+
+.tagline {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    opacity: 0.7;
+    color: #424245;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.nav a {
+    color: #1d1d1f;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.nav a:hover {
+    background: rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+}
+
+/* Places Section */
+.places-section {
+    padding: 80px 0;
+}
+
+.places-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: #f9faf8;
+}
+
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.place-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.place-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.place-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.place-card h3 {
+    padding: 20px 20px 10px;
+    font-size: 1.4em;
+    color: #1d1d1f;
+    font-weight: 600;
+}
+
+.place-card p {
+    padding: 0 20px;
+    color: #424245;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+.rating {
+    display: block;
+    padding: 0 20px 20px;
+    color: #ffc107;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Map Section */
+.map-section {
+    padding: 80px 0;
+}
+
+.map-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: #1d1d1f;
+}
+
+.map-container {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.map-container iframe {
+    display: block;
+}
+
+/* Information Section */
+
+.mayor-section h2{
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.mayor-img {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.mayor-info {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.info-section {
+    padding: 80px 0;
+    background-color: transparent;
+    margin-top: 40px;
+}
+
+.info-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: #1d1d1f;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.info-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #1d1d1f;
+}
+
+.info-card p {
+    color: #424245;
+    line-height: 1.7;
+}
+
+/* Footer */
+.footer {
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0);
+    color: #1d1d1f;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+}
+
+.footer a {
+    color: #0071e3;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.footer a:hover {
+    color: #0077ed;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .tagline {
+        font-size: 1em;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .places-section h2,
+    .info-section h2 {
+        font-size: 2em;
+    }
+
+    .places-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .place-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .info-card:hover {
+        transform: translateY(-3px);
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5em;
+    }
+
+    .tagline {
+        font-size: 0.9em;
+        margin-bottom: 20px;
+    }
+
+    .places-section h2,
+    .info-section h2 {
+        font-size: 1.5em;
+        margin-bottom: 30px;
+    }
+
+    .place-card p,
+    .info-card p {
+        font-size: 0.9em;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 25px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+    z-index: 1001;
+    transition: all 0.2s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #1d1d1f;
+    transform: scale(1.1);
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    display: block;
+    border-radius: 25px 25px 0 0;
+}
+
+.modal-text {
+    padding: 40px;
+    position: relative;
+}
+
+.modal-text h2 {
+    font-size: 2em;
+    margin-bottom: 25px;
+    color: #1d1d1f;
+    font-weight: 600;
+}
+
+.modal-text h4 {
+    font-size: 1.1em;
+    color: #0071e3;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.modal-text p {
+    color: #424245;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.place-details {
+    margin-top: 15px;
+}
+
+/* Responsive Modal */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+        margin: 20% auto;
+        max-height: 70vh;
+    }
+
+    .modal-image {
+        height: 250px;
+    }
+
+    .modal-text {
+        padding: 25px;
+    }
+
+    .modal-text h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .close {
+        right: 15px;
+        top: 10px;
+        font-size: 28px;
+    }
+}
+
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 0; height: 0;
+}
